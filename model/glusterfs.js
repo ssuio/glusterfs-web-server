@@ -11,7 +11,7 @@ function showPeerStatus() {
     })
 }
 
-exports.module = {
+module.exports = {
     showPeerStatus
 }
 

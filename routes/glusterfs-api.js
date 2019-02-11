@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var glusterfs = require('../model/glusterfs')
+var gf = require('../model/glusterfs')
 
 router.get('/hello', function (req, res, next) {
   res.json({
@@ -9,7 +9,7 @@ router.get('/hello', function (req, res, next) {
 });
 
 router.get('/peer', function (req, res, next) {
-  glusterfs.showPeerStatus().then(data => {
+  gf.showPeerStatus().then(data => {
     res.json({
       data: data
     })
